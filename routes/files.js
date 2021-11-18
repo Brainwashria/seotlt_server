@@ -22,8 +22,7 @@ const getFileData = (req) => {
                 });
             }))
             const fileSize = Buffer.from(buffer, 'base64').length
-            const filenameWithoutExtension = filename.split('.').slice(0, -1).join('.')
-            const fileName = filenameWithoutExtension;
+            const fileName = filename.split('.').slice(0, -1).join('.')
             const fileExtension = filename.split('.').pop();
             resolve({
                 fileSize,
